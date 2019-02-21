@@ -8,7 +8,7 @@ backend trac {
 }
 
 sub vcl_recv {
-       if (req.http.host == "two.example.com" || req.http.host == "www.two.example.com") {
+       if (req.http.host == "b.example.com" || req.http.host == "www.b.example.com") {
            set req.backend_hint = trac;
        }
 }
